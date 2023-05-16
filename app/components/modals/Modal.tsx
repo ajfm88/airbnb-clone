@@ -45,7 +45,7 @@ const Modal: React.FC<ModalProps> = ({
     setTimeout(() => {
       onClose();
     }, 300);
-  }, [disabled, onClose]);
+  }, [onClose, disabled]);
 
   const handleSubmit = useCallback(() => {
     if (disabled) {
@@ -139,7 +139,6 @@ const Modal: React.FC<ModalProps> = ({
                 '
               >
                 <button
-                  onClick={handleClose}
                   className='
                     p-1
                     border-0 
@@ -148,6 +147,7 @@ const Modal: React.FC<ModalProps> = ({
                     absolute
                     left-9
                   '
+                  onClick={handleClose}
                 >
                   <IoMdClose size={18} />
                 </button>
@@ -168,10 +168,10 @@ const Modal: React.FC<ModalProps> = ({
                 >
                   {secondaryAction && secondaryActionLabel && (
                     <Button
-                      outline
                       disabled={disabled}
                       label={secondaryActionLabel}
                       onClick={handleSecondaryAction}
+                      outline
                     />
                   )}
                   <Button
