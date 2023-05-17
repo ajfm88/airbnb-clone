@@ -14,7 +14,7 @@ import getCurrentUser from './actions/getCurrentUser';
 
 export const metadata = {
   title: 'Airbnb',
-  description: 'Airbnb Clone',
+  description: '🛌 Airbnb clone created by ajfm88 using Next.js 13, Tailwind CSS and TypeScript. 🏡',
 };
 
 const font = Nunito({
